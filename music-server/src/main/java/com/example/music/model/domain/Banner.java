@@ -4,15 +4,19 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+/**
+ * 
+ * @TableName banner
+ */
 @Data
 public class Banner implements Serializable {
     /**
-     *
+     * 
      */
     private Integer id;
 
     /**
-     *
+     * 
      */
     private String pic;
 
@@ -31,7 +35,7 @@ public class Banner implements Serializable {
         }
         Banner other = (Banner) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-                && (this.getPic() == null ? other.getPic() == null : this.getPic().equals(other.getPic()));
+            && (this.getPic() == null ? other.getPic() == null : this.getPic().equals(other.getPic()));
     }
 
     @Override
