@@ -1,9 +1,8 @@
 package com.example.music.constant;
 
 public class Constants {
-    /* Storage paths for song images, singer images, song files, playlist images, etc. */
     public static String ASSETS_PATH = System.getProperty("user.dir");
-
+    
     public static String AVATAR_IMAGES_PATH = "file:" + ASSETS_PATH + "/img/avatarImages/";
     public static String SONGLIST_PIC_PATH = "file:" + ASSETS_PATH + "/img/songListPic/";
     public static String SONG_PIC_PATH = "file:" + ASSETS_PATH + "/img/songPic/";

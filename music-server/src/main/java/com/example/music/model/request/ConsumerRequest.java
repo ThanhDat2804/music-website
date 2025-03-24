@@ -10,7 +10,7 @@ public class ConsumerRequest {
 
     private String username;
 
-    private String oldPassword; // The user's old password will be used, so mapping is sufficient
+    private String oldPassword; //因为会用到用户旧密码 这无所谓的对应即可
 
     private String password;
 

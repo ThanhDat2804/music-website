@@ -1,8 +1,8 @@
-package com.example.music.service.Impl;
+package com.example.music.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.example.music.common.Response;
+import com.example.music.common.R;
 import com.example.music.mapper.AdminMapper;
 import com.example.music.model.domain.Admin;
 import com.example.music.model.request.AdminRequest;
@@ -18,16 +18,16 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     private AdminMapper adminMapper;
 
     @Override
-    public Response verityPasswd(AdminRequest adminRequest, HttpSession session) {
+    public R verityPasswd(AdminRequest adminRequest, HttpSession session) {
         QueryWrapper<Admin> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("name", adminRequest.getUsername());
         queryWrapper.eq("password", adminRequest.getPassword());
 
         if (adminMapper.selectCount(queryWrapper) > 0) {
             session.setAttribute("name", adminRequest.getUsername());
-            return Response.success("Login successful");
+            return R.success("Login successful");
         } else {
-            return Response.error("Incorrect username or password");
+            return R.error("Incorrect username or password");
         }
     }
 }
