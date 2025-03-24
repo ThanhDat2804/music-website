@@ -1,4 +1,4 @@
-package com.example.yin.model.domain;
+package com.example.music.model.domain;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
