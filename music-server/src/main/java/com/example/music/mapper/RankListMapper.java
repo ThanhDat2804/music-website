@@ -9,17 +9,17 @@ import org.springframework.stereotype.Repository;
 public interface RankListMapper extends BaseMapper<RankList> {
 
     /**
-     * Query total score
-     * @param songListId
-     * @return
+     * Get the total score for a song list
+     * @param songListId The ID of the song list
+     * @return The total score
      */
     int selectScoreSum(Long songListId);
 
     /**
-     * Query specific user's rating
-     * @param consumerId
-     * @param songListId
-     * @return
+     * Get the rating given by a specific user
+     * @param consumerId The ID of the user
+     * @param songListId The ID of the song list
+     * @return The rating given by the user
      */
     Integer selectUserRank(@Param("consumer_id") Long consumerId, @Param("song_list_id") Long songListId);
 }

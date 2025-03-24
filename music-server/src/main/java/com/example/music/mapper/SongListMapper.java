@@ -5,7 +5,6 @@ import com.example.music.model.domain.SongList;
 import org.springframework.stereotype.Repository;
 
 @Repository
-
 public interface SongListMapper extends BaseMapper<SongList> {
 
 
