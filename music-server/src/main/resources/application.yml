@@ -1,0 +1,20 @@
+spring:
+  mail:
+    host: smtp.163.com # Website email service host
+    port: 465
+    username:   # Email account used to send service emails
+    password:  # Authentication code for the service account
+    properties:
+      mail:
+        smtp:
+          auth: true
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+          starttls:
+            enable: true
+mail:
+  address:   # Service email address
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
